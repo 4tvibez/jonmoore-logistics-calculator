@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonmoore International - Cargo Cost Calculator Concept</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="brand-header">
+            <h2>JONMOORE INTERNATIONAL</h2>
+            <p>Heavy Haulage & Project Logistics Cost Estimator</p>
+        </div>
+        
+        <form id="calc-form">
+            <div class="input-group">
+                <label for="cargo-type">Service Type</label>
+                <select id="cargo-type" required>
+                    <option value="domestic">Domestic Haulage (Standard)</option>
+                    <option value="crossBorder">Cross-Border Freight</option>
+                    <option value="heavyHaulage">Heavy Haulage & Out-of-Gauge</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="distance">Estimated Distance (KM)</label>
+                <input type="number" id="distance" min="1" placeholder="e.g., 250 (Accra to Kumasi)" required>
+            </div>
+
+            <div class="input-group">
+                <label for="weight">Cargo Weight (Tons)</label>
+                <input type="number" id="weight" min="1" placeholder="e.g., 15" required>
+            </div>
+
+            <button type="submit" class="btn-calculate">Calculate Estimate</button>
+        </form>
+
+        <div id="result-box" class="result-box hidden">
+            <h3>Estimated Budgetary Quote</h3>
+            <p class="disclaimer">Based on standardized regional freight metrics</p>
+            <div class="price-display" id="cost-display">GHS 0.00</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+  </html>
+  
